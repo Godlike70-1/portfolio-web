@@ -1,0 +1,9 @@
+change anything you want
+git add .
+git status [to check if modified or not]
+
+After the changes are made
+
+git commit -m "modify message"
+
+git push [to finally make changes in github]
