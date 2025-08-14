@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -11,12 +12,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <style>
-    html{scroll-behavior:smooth}
-    body{font-family:Inter,ui-sans-serif,system-ui}
-    .shadow-wire{box-shadow:0 0 0 1px rgba(255,215,0,.06),0 10px 30px -10px rgba(0,0,0,.6)}
-    .grayscale-img{filter:grayscale(100%)}
-    @keyframes caret{50%{opacity:0}}
-    .cursor{animation:caret 1s step-end infinite}
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui
+    }
+
+    .shadow-wire {
+      box-shadow: 0 0 0 1px rgba(255, 215, 0, .06), 0 10px 30px -10px rgba(0, 0, 0, .6)
+    }
+
+    @keyframes caret {
+      50% {
+        opacity: 0
+      }
+    }
+
+    .cursor {
+      animation: caret 1s step-end infinite
+    }
   </style>
 </head>
 
@@ -26,17 +42,19 @@
     <nav class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
       <a href="#home" class="font-extrabold tracking-tight text-[#FFD700]">MANJIL AAYAM MAHARJAN</a>
       <button id="menuBtn" class="lg:hidden p-2 rounded-md hover:bg-[#FFD700]/10" aria-label="Open menu">
-        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M3 6h18M3 12h18M3 18h18" />
+        </svg>
       </button>
       <ul id="navLinks" class="hidden lg:flex items-center gap-6 text-sm">
         <li><a class="hover:text-[#FFD700]" href="#home">Home</a></li>
         <li><a class="hover:text-[#FFD700]" href="#about">About</a></li>
         <li><a class="hover:text-[#FFD700]" href="#skills">Skills</a></li>
+        <li><a class="hover:text-[#FFD700]" href="#Projects">Projects</a></li>
         <li><a class="hover:text-[#FFD700]" href="#experience">Experience</a></li>
         <li><a class="hover:text-[#FFD700]" href="#languages">Languages</a></li>
         <li><a class="hover:text-[#FFD700]" href="#education">Education</a></li>
         <li><a class="hover:text-[#FFD700]" href="#engagements">Engagements</a></li>
-        <li><a class="hover:text-[#FFD700]" href="#certs">Certifications</a></li>
         <li><a class="hover:text-[#FFD700]" href="#socials">Social Media</a></li>
         <li><a class="hover:text-[#FFD700]" href="#contact">Contact</a></li>
       </ul>
@@ -47,6 +65,7 @@
         <a class="py-1 hover:text-[#FFD700]" href="#home">Home</a>
         <a class="py-1 hover:text-[#FFD700]" href="#about">About</a>
         <a class="py-1 hover:text-[#FFD700]" href="#skills">Skills</a>
+        <a class="py-1 hover:text-[#FFD700]" href="#Projects">Projects</a>
         <a class="py-1 hover:text-[#FFD700]" href="#experience">Experience</a>
         <a class="py-1 hover:text-[#FFD700]" href="#languages">Languages</a>
         <a class="py-1 hover:text-[#FFD700]" href="#education">Education</a>
@@ -64,20 +83,26 @@
       <div>
         <p class="text-xs tracking-widest text-[#FFD700]/70">CYBERSECURITY • VAPT • APPSEC • NETWORKING</p>
         <h1 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-          I break systems <span class="text-white/80">so we can</span> build them safer<span class="text-[#FFD700]">_</span>
+          I break systems <span class="text-white/80">so we can</span> build them safer<span
+            class="text-[#FFD700]">_</span>
         </h1>
         <p class="mt-5 text-white/80 max-w-xl">
           Web/App security, offensive research, infrastructure hardening, and clear remediation for real-world impact.
         </p>
         <div class="mt-8 flex flex-wrap gap-4">
-          <a href="#experience" class="inline-flex items-center rounded-xl bg-[#FFD700] text-[#1B263B] px-5 py-3 font-semibold hover:bg-[#E6C200]">View Experience</a>
-          <a href="#contact" class="inline-flex items-center rounded-xl border border-[#FFD700]/40 px-5 py-3 font-semibold text-white hover:bg-[#FFD700]/10">Hire / Collaborate</a>
+          <a href="#experience"
+            class="inline-flex items-center rounded-xl bg-[#FFD700] text-[#1B263B] px-5 py-3 font-semibold hover:bg-[#E6C200]">View
+            Experience</a>
+          <a href="#contact"
+            class="inline-flex items-center rounded-xl border border-[#FFD700]/40 px-5 py-3 font-semibold text-white hover:bg-[#FFD700]/10">Hire
+            / Collaborate</a>
         </div>
       </div>
       <div class="relative">
         <div class="absolute -inset-4 -z-10 rounded-3xl bg-[#FFD700]/10 blur-2xl"></div>
         <!-- TODO: Replace profile image -->
-        <img src="images/prof.jpg" alt="Profile" class="w-full max-w-md mx-auto rounded-3xl ring-1 ring-[#FFD700]/20 shadow-wire grayscale-img object-cover aspect-[4/5]" />
+        <img src="images/prof.jpg" alt="Profile"
+          class="w-full max-w-md mx-auto rounded-3xl ring-1 ring-[#FFD700]/20 shadow-wire grayscale-img object-cover aspect-[4/5]" />
       </div>
     </div>
   </section>
@@ -88,7 +113,10 @@
       <div class="lg:col-span-5">
         <h2 class="text-3xl font-extrabold text-[#FFD700]">About Me</h2>
         <p class="mt-4 text-white/85">
-          I’m a cybersecurity researcher focused on VAPT and secure engineering. I combine OWASP/PTES methodology with creative exploitation and practical remediation that teams can actually use.
+          I’m a cybersecurity researcher focused on VAPT, secure engineering, and network infrastructure.
+          While I work across web application security and ethical hacking, I am mostly interested in the networking
+          field —
+          configuring, managing, and securing network devices to ensure reliable and secure communication.
         </p>
         <div class="mt-6 grid grid-cols-2 gap-3">
           <div class="rounded-xl border border-[#FFD700]/15 bg-white/5 p-4">
@@ -99,18 +127,26 @@
             <p class="text-2xl font-extrabold text-white">CTFs</p>
             <p class="text-xs text-white/70">Labs & write-ups</p>
           </div>
+          <div class="rounded-xl border border-[#FFD700]/15 bg-white/5 p-4">
+            <p class="text-2xl font-extrabold text-white">Cisco Packet Tracer</p>
+            <p class="text-xs text-white/70">Three Tier Architecture</p>
+          </div>
         </div>
       </div>
       <div class="lg:col-span-7">
         <div class="rounded-2xl border border-[#FFD700]/15 bg-white/5 p-6 lg:p-8 leading-relaxed text-white/85">
           <p>
             I cover the full lifecycle: recon → threat modeling → exploitation → post-exploitation → reporting & fixes.
-            Expect reproducible PoCs, risk-driven impact, and pragmatic remediation plans that reflect engineering realities.
+            Expect reproducible PoCs, risk-driven impact, and pragmatic remediation plans that reflect engineering
+            realities.
+            My networking passion includes configuring routers, switches, VLANs, and security rules to create robust
+            infrastructures.
           </p>
         </div>
       </div>
     </div>
   </section>
+
 
   <!-- SKILLS -->
   <section id="skills" class="py-16 border-t border-[#FFD700]/20">
@@ -139,7 +175,8 @@
             <span class="px-2 py-1 rounded bg-[#1B263B] text-white border border-[#FFD700]/25">Gobuster</span>
             <span class="px-2 py-1 rounded bg-[#1B263B] text-white border border-[#FFD700]/25">Wireshark</span>
             <span class="px-2 py-1 rounded bg-[#1B263B] text-white border border-[#FFD700]/25">Python</span>
-            <span class="px-2 py-1 rounded bg-[#1B263B] text-white border border-[#FFD700]/25">Cisco Packet Tracer</span>
+            <span class="px-2 py-1 rounded bg-[#1B263B] text-white border border-[#FFD700]/25">Cisco Packet
+              Tracer</span>
           </div>
         </div>
         <div class="rounded-2xl border border-[#FFD700]/15 bg-white/5 p-6">
@@ -154,35 +191,104 @@
     </div>
   </section>
 
+  <!-- PROJECTS -->
+  <section id="projects" class="py-16 border-t border-[#FFD700]/20">
+    <div class="mx-auto max-w-7xl px-6">
+      <h2 class="text-3xl font-extrabold text-[#FFD700]">Projects</h2>
+      <p class="mt-2 text-white/80">A selection of my work from GitHub.</p>
+
+      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Project 2 -->
+        <article class="rounded-2xl border border-[#FFD700]/15 bg-white/5 p-6 hover:border-[#FFD700]/30 transition">
+          <h3 class="text-xl font-semibold text-white">Networking Configurations</h3>
+          <p class="mt-2 text-white/80 text-sm">
+            Practical networking setups using Cisco Packet Tracer, including VLANs and routing.
+          </p>
+          <div class="mt-4 flex gap-3">
+            <a class="rounded-lg border border-[#FFD700]/30 px-3 py-2 hover:bg-[#FFD700]/10"
+              href="https://github.com/Godlike70-1/networking" target="_blank" rel="noreferrer">View Repo</a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="rounded-2xl border border-[#FFD700]/15 bg-white/5 p-6 hover:border-[#FFD700]/30 transition">
+          <h3 class="text-xl font-semibold text-white">Secure Chat System</h3>
+          <p class="mt-2 text-white/80 text-sm">
+            A Python-based secure chat system implementing basic encryption for privacy.
+          </p>
+          <div class="mt-4 flex gap-3">
+            <a class="rounded-lg border border-[#FFD700]/30 px-3 py-2 hover:bg-[#FFD700]/10"
+              href="https://github.com/Godlike70-1/Secure-Chat-System" target="_blank" rel="noreferrer">View Repo</a>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="rounded-2xl border border-[#FFD700]/15 bg-white/5 p-6 hover:border-[#FFD700]/30 transition">
+          <h3 class="text-xl font-semibold text-white">IP Tracker</h3>
+          <p class="mt-2 text-white/80 text-sm">
+            Python tool that fetches detailed information about any public IP address.
+          </p>
+          <div class="mt-4 flex gap-3">
+            <a class="rounded-lg border border-[#FFD700]/30 px-3 py-2 hover:bg-[#FFD700]/10"
+              href="https://github.com/Godlike70-1/IP-TRACKER" target="_blank" rel="noreferrer">View Repo</a>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="rounded-2xl border border-[#FFD700]/15 bg-white/5 p-6 hover:border-[#FFD700]/30 transition">
+          <h3 class="text-xl font-semibold text-white">File Extension Changer</h3>
+          <p class="mt-2 text-white/80 text-sm">
+            Python script to change the extension/type of any file as required.
+          </p>
+          <div class="mt-4 flex gap-3">
+            <a class="rounded-lg border border-[#FFD700]/30 px-3 py-2 hover:bg-[#FFD700]/10"
+              href="https://github.com/Godlike70-1/File-extension" target="_blank" rel="noreferrer">View Repo</a>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="rounded-2xl border border-[#FFD700]/15 bg-white/5 p-6 hover:border-[#FFD700]/30 transition">
+          <h3 class="text-xl font-semibold text-white">Cyber Book Store</h3>
+          <p class="mt-2 text-white/80 text-sm">
+            A PHP-based online bookstore developed as coursework with basic CRUD functionality.
+          </p>
+          <div class="mt-4 flex gap-3">
+            <a class="rounded-lg border border-[#FFD700]/30 px-3 py-2 hover:bg-[#FFD700]/10"
+              href="https://github.com/Godlike70-1/Cyber-Book-Store" target="_blank" rel="noreferrer">View Repo</a>
+          </div>
+        </article>
+
+        <!-- Project 7 -->
+        <article class="rounded-2xl border border-[#FFD700]/15 bg-white/5 p-6 hover:border-[#FFD700]/30 transition">
+          <h3 class="text-xl font-semibold text-white">Full Stack Practice Website</h3>
+          <p class="mt-2 text-white/80 text-sm">
+            Full-stack practice project using ReactJS, PHP, and HTML/CSS/JavaScript.
+          </p>
+          <div class="mt-4 flex gap-3">
+            <a class="rounded-lg border border-[#FFD700]/30 px-3 py-2 hover:bg-[#FFD700]/10"
+              href="https://github.com/Godlike70-1/WEB_site" target="_blank" rel="noreferrer">View Repo</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="mt-8">
+        <a class="inline-flex items-center rounded-xl border border-[#FFD700]/30 px-4 py-2 hover:bg-[#FFD700]/10"
+          href="https://github.com/Godlike70-1?tab=repositories" target="_blank" rel="noreferrer">
+          See all repositories →
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- EXPERIENCE -->
   <section id="experience" class="py-16 border-t border-[#FFD700]/20">
     <div class="mx-auto max-w-7xl px-6">
       <h2 class="text-3xl font-extrabold text-[#FFD700]">Experience</h2>
-      <div class="mt-8 grid gap-6">
-        <!-- TODO: Duplicate/modify blocks per role -->
-        <article class="rounded-2xl border border-[#FFD700]/15 bg-white/5 p-6">
-          <div class="flex items-center justify-between gap-4 flex-wrap">
-            <h3 class="text-xl font-semibold">Cybersecurity Intern — <span class="text-white/90">Company Name</span></h3>
-            <span class="text-sm text-white/70">Jan 2025 – Present • Kathmandu</span>
-          </div>
-          <ul class="mt-3 list-disc list-inside text-white/80 text-sm space-y-1">
-            <li>Performed VAPT on web apps and APIs; documented findings with CVSS and remediation.</li>
-            <li>Automated lab tasks (CSRF/JWT/CORS) and improved PoC reliability.</li>
-            <li>Collaborated with devs to fix critical auth and access control issues.</li>
-          </ul>
-        </article>
-
-        <!-- Example Role -->
-        <article class="rounded-2xl border border-[#FFD700]/15 bg-white/5 p-6">
-          <div class="flex items-center justify-between gap-4 flex-wrap">
-            <h3 class="text-xl font-semibold">Network Support (Part-time) — <span class="text-white/90">Org/Client</span></h3>
-            <span class="text-sm text-white/70">Aug 2024 – Dec 2024 • Remote</span>
-          </div>
-          <ul class="mt-3 list-disc list-inside text-white/80 text-sm space-y-1">
-            <li>Configured VLANs, ACLs, and routing; tightened perimeter firewall rules.</li>
-            <li>Captured/analysed packets (Wireshark) to troubleshoot performance issues.</li>
-          </ul>
-        </article>
+      <div class="mt-8 text-white/80 text-lg">
+        No professional experience yet — currently seeking opportunities to contribute and grow in the cybersecurity
+        field.
       </div>
     </div>
   </section>
@@ -250,41 +356,23 @@
     </div>
   </section>
 
-  <!-- CERTIFICATIONS -->
-  <section id="certs" class="py-16 border-t border-[#FFD700]/20">
-    <div class="mx-auto max-w-7xl px-6">
-      <h2 class="text-3xl font-extrabold text-[#FFD700]">Certifications</h2>
-      <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- TODO: Replace each card with your cert + image -->
-        <div class="rounded-2xl border border-[#FFD700]/15 bg-white/5 p-6">
-          <img src="images/cert-1.jpg" alt="Certificate 1" class="h-36 w-full object-cover grayscale-img rounded-lg ring-1 ring-[#FFD700]/20">
-          <h3 class="mt-4 font-semibold">eJPT (In Progress)</h3>
-          <p class="text-sm text-white/70">INE / eLearnSecurity</p>
-        </div>
-        <div class="rounded-2xl border border-[#FFD700]/15 bg-white/5 p-6">
-          <img src="images/cert-2.jpg" alt="Certificate 2" class="h-36 w-full object-cover grayscale-img rounded-lg ring-1 ring-[#FFD700]/20">
-          <h3 class="mt-4 font-semibold">PNPT (Planned)</h3>
-          <p class="text-sm text-white/70">TCM Security</p>
-        </div>
-        <div class="rounded-2xl border border-[#FFD700]/15 bg-white/5 p-6">
-          <img src="images/cert-3.jpg" alt="Certificate 3" class="h-36 w-full object-cover grayscale-img rounded-lg ring-1 ring-[#FFD700]/20">
-          <h3 class="mt-4 font-semibold">OSCP (Goal)</h3>
-          <p class="text-sm text-white/70">OffSec</p>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <!-- SOCIAL MEDIA -->
   <section id="socials" class="py-16 border-t border-[#FFD700]/20">
     <div class="mx-auto max-w-7xl px-6">
       <h2 class="text-3xl font-extrabold text-[#FFD700]">Social Media</h2>
       <div class="mt-6 flex flex-wrap gap-4 text-sm">
-        <a class="rounded-xl border border-[#FFD700]/30 px-4 py-2 hover:bg-[#FFD700]/10" href="https://github.com/Godlike70-1/" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="rounded-xl border border-[#FFD700]/30 px-4 py-2 hover:bg-[#FFD700]/10" href="https://www.linkedin.com/in/manzil-maharjan-a992a3226/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="rounded-xl border border-[#FFD700]/30 px-4 py-2 hover:bg-[#FFD700]/10" href="https://www.instagram.com/manzil.bit/" target="_blank" rel="noreferrer">Instagram</a>
-        <a class="rounded-xl border border-[#FFD700]/30 px-4 py-2 hover:bg-[#FFD700]/10" href="maito:maharjanmanjil012@gmail.com">Email</a>
-        <a class="rounded-xl border border-[#FFD700]/30 px-4 py-2 hover:bg-[#FFD700]/10" href="https://www.facebook.com/manjil.maharzan">Facebook</a>
+        <a class="rounded-xl border border-[#FFD700]/30 px-4 py-2 hover:bg-[#FFD700]/10"
+          href="https://github.com/Godlike70-1/" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="rounded-xl border border-[#FFD700]/30 px-4 py-2 hover:bg-[#FFD700]/10"
+          href="https://www.linkedin.com/in/manzil-maharjan-a992a3226/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="rounded-xl border border-[#FFD700]/30 px-4 py-2 hover:bg-[#FFD700]/10"
+          href="https://www.instagram.com/manzil.bit/" target="_blank" rel="noreferrer">Instagram</a>
+        <a class="rounded-xl border border-[#FFD700]/30 px-4 py-2 hover:bg-[#FFD700]/10"
+          href="maito:maharjanmanjil012@gmail.com">Email</a>
+        <a class="rounded-xl border border-[#FFD700]/30 px-4 py-2 hover:bg-[#FFD700]/10"
+          href="https://www.facebook.com/manjil.maharzan">Facebook</a>
       </div>
     </div>
   </section>
@@ -294,12 +382,17 @@
     <div class="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-start">
       <div>
         <h2 class="text-3xl font-extrabold text-[#FFD700]">Contact</h2>
-        <p class="mt-3 text-white/80 max-w-md">Kathmandu, Nepal · Available for projects, internships, and collaborations.</p>
+        <p class="mt-3 text-white/80 max-w-md">Kathmandu, Nepal · Available for projects, internships, and
+          collaborations.</p>
         <div class="mt-8 grid gap-3 text-sm text-white/80">
-          <p><a class="underline underline-offset-4 hover:text-[#FFD700]" href="mailto:maharjanmanjil012@gmail.com">maharjanmanjil012@gmail.com</a></p>
-          <p><a class="underline underline-offset-4 hover:text-[#FFD700]" href="https://github.com/Godlike70-1/" target="_blank" rel="noreferrer">https://github.com/Godlike70-1/</a></p>
-          <p><a class="underline underline-offset-4 hover:text-[#FFD700]" href="https://www.linkedin.com/in/manzil-maharjan-a992a3226/" target="_blank" rel="noreferrer">https://www.linkedin.com/in/manzil-maharjan-a992a3226/</a></p>
-          <p>Call: +977 9840330069</p>
+          <p><a class="underline underline-offset-4 hover:text-[#FFD700]"
+              href="mailto:maharjanmanjil012@gmail.com">maharjanmanjil012@gmail.com</a></p>
+          <p><a class="underline underline-offset-4 hover:text-[#FFD700]" href="https://github.com/Godlike70-1/"
+              target="_blank" rel="noreferrer">https://github.com/Godlike70-1/</a></p>
+          <p><a class="underline underline-offset-4 hover:text-[#FFD700]"
+              href="https://www.linkedin.com/in/manzil-maharjan-a992a3226/" target="_blank"
+              rel="noreferrer">https://www.linkedin.com/in/manzil-maharjan-a992a3226/</a></p>
+          <p>Call: +977 9840330069 for talking</p>
         </div>
       </div>
 
@@ -308,17 +401,24 @@
         <form id="contact-form" class="grid gap-4">
           <div>
             <label for="name" class="text-sm text-white/70">Your Name</label>
-            <input id="name" name="name" required class="mt-1 w-full rounded-xl bg-[#1B263B] border border-[#FFD700]/25 px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#FFD700]/40" placeholder="Ram" />
+            <input id="name" name="name" required
+              class="mt-1 w-full rounded-xl bg-[#1B263B] border border-[#FFD700]/25 px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#FFD700]/40"
+              placeholder="Ram" />
           </div>
           <div>
             <label for="email" class="text-sm text-white/70">Your Email</label>
-            <input id="email" name="email" type="email" required class="mt-1 w-full rounded-xl bg-[#1B263B] border border-[#FFD700]/25 px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#FFD700]/40" placeholder="ram@g.com" />
+            <input id="email" name="email" type="email" required
+              class="mt-1 w-full rounded-xl bg-[#1B263B] border border-[#FFD700]/25 px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#FFD700]/40"
+              placeholder="ram@g.com" />
           </div>
           <div>
             <label for="message" class="text-sm text-white/70">Message</label>
-            <textarea id="message" name="message" required rows="5" class="mt-1 w-full rounded-xl bg-[#1B263B] border border-[#FFD700]/25 px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#FFD700]/40" placeholder="send me a message"></textarea>
+            <textarea id="message" name="message" required rows="5"
+              class="mt-1 w-full rounded-xl bg-[#1B263B] border border-[#FFD700]/25 px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#FFD700]/40"
+              placeholder="send me a message"></textarea>
           </div>
-          <button class="mt-2 inline-flex items-center justify-center rounded-xl bg-[#FFD700] text-[#1B263B] px-5 py-3 font-semibold hover:bg-[#E6C200]">
+          <button
+            class="mt-2 inline-flex items-center justify-center rounded-xl bg-[#FFD700] text-[#1B263B] px-5 py-3 font-semibold hover:bg-[#E6C200]">
             Send Message
           </button>
           <p id="formStatus" class="text-sm text-white/70"></p>
@@ -329,7 +429,8 @@
 
   <!-- FOOTER -->
   <footer class="border-t border-[#FFD700]/20">
-    <div class="mx-auto max-w-7xl px-6 py-8 text-sm text-white/70 flex flex-col sm:flex-row items-center justify-between gap-3">
+    <div
+      class="mx-auto max-w-7xl px-6 py-8 text-sm text-white/70 flex flex-col sm:flex-row items-center justify-between gap-3">
       <p>© <span id="year"></span> Manjil Aayam Maharjan. All rights reserved.</p>
       <a class="hover:text-[#FFD700]" href="#home">Back to top ↑</a>
     </div>
@@ -338,7 +439,7 @@
   <!-- Scripts -->
   <script>
     // EmailJS init — TODO: replace with your public key
-    (function(){ emailjs.init("AZ5tryu78HvKJ5btd"); })();
+    (function () { emailjs.init("AZ5tryu78HvKJ5btd"); })();
 
     const statusEl = document.getElementById('formStatus');
     document.getElementById('contact-form').addEventListener('submit', async (e) => {
@@ -358,10 +459,11 @@
     // Mobile menu
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
-    menuBtn?.addEventListener('click', ()=> mobileMenu.classList.toggle('hidden'));
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
+
 </html>
