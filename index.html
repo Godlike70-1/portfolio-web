@@ -1,139 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manjil Maharjan - Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Manjil Aayam Maharjan — Cybersecurity Portfolio</title>
+    <meta name="description"
+        content="Cybersecurity portfolio of Manjil Aayam Maharjan — VAPT, Web App Security, Offensive Research." />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <style>
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        html {
+            scroll-behavior: smooth;
         }
-        .animate-fade-in {
-            animation: fadeIn 0.8s ease-out forwards;
+
+        body {
+            font-family: Inter, ui-sans-serif, system-ui;
         }
-        .hover-scale {
-            transition: transform 0.3s ease;
+
+        @keyframes caret {
+            50% {
+                opacity: 0;
+            }
         }
-        .hover-scale:hover {
-            transform: scale(1.05);
+
+        .cursor {
+            animation: caret 1s step-end infinite;
+        }
+
+        .shadow-wire {
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 10px 30px -10px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Monochrome image filter helper (optional) */
+        .grayscale-img {
+            filter: grayscale(100%);
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans">
-    <header class="fixed top-0 w-full bg-gray-800/90 backdrop-blur-sm z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold text-teal-400">Manjil Aayam Maharjan</div>
-            <ul class="flex space-x-8">
-                <li><a href="#home" class="hover:text-teal-400 transition-colors">Home</a></li>
-                <li><a href="#about" class="hover:text-teal-400 transition-colors">About</a></li>
-                <li><a href="#projects" class="hover:text-teal-400 transition-colors">Projects</a></li>
-                <li><a href="#contact" class="hover:text-teal-400 transition-colors">Samparka</a></li>
+
+<body class="bg-black text-gray-100">
+    <!-- NAV -->
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur">
+        <nav class="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+            <a href="#home" class="font-extrabold tracking-tight">MANJIL AAYAM MAHARJAN</a>
+            <button id="menuBtn" class="lg:hidden p-2 rounded-md hover:bg-white/5" aria-label="Open menu">
+                <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3 6h18M3 12h18M3 18h18" />
+                </svg>
+            </button>
+            <ul id="navLinks" class="hidden lg:flex items-center gap-8 text-sm">
+                <li><a class="hover:text-white/80" href="#home">Home</a></li>
+                <li><a class="hover:text-white/80" href="#about">About</a></li>
+                <li><a class="hover:text-white/80" href="#skills">Skills</a></li>
+                <li><a class="hover:text-white/80" href="#services">Services</a></li>
+                <li><a class="hover:text-white/80" href="#projects">Case Studies</a></li>
+                <li><a class="hover:text-white/80" href="#labs">Labs & CTFs</a></li>
+                <li><a class="hover:text-white/80" href="#writeups">Write-ups</a></li>
+                <li><a class="hover:text-white/80" href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <div id="mobileMenu" class="lg:hidden hidden border-t border-white/10 bg-black/90">
+            <div class="max-w-7xl mx-auto px-6 py-4 grid gap-3 text-sm">
+                <a class="py-1 hover:text-white/80" href="#home">Home</a>
+                <a class="py-1 hover:text-white/80" href="#about">About</a>
+                <a class="py-1 hover:text-white/80" href="#skills">Skills</a>
+                <a class="py-1 hover:text-white/80" href="#services">Services</a>
+                <a class="py-1 hover:text-white/80" href="#projects">Case Studies</a>
+                <a class="py-1 hover:text-white/80" href="#labs">Labs & CTFs</a>
+                <a class="py-1 hover:text-white/80" href="#writeups">Write-ups</a>
+                <a class="py-1 hover:text-white/80" href="#contact">Contact</a>
+            </div>
+        </div>
     </header>
 
-    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-800 to-gray-900">
-        <div class="text-center animate-fade-in">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">Welcome to My Portfolio</h1>
-            <p class="text-xl md:text-2xl mb-8 text-gray-300">I'm a Cybersecurity Researcher passionate about securing the digital world</p>
-            <a href="#projects" class="inline-block bg-teal-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-teal-600 transition-colors">View My Work</a>
+    <!-- HERO -->
+    <section id="home" class="pt-28">
+        <div class="mx-auto max-w-7xl px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <p class="text-xs tracking-widest text-white/50">CYBERSECURITY • VAPT • OFFENSIVE RESEARCH</p>
+                <h1 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+                    I break systems <span class="text-white/70">so we can</span> build them safer<span
+                        class="cursor">_</span>
+                </h1>
+                <p class="mt-5 text-white/70 max-w-xl">
+                    Web application security, infrastructure hardening, red team-style assessments, and precise
+                    remediation guidance — delivered end-to-end.
+                </p>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <a href="#projects"
+                        class="inline-flex items-center rounded-xl bg-white text-black px-5 py-3 font-semibold hover:bg-white/90">View
+                        Case Studies</a>
+                    <a href="#contact"
+                        class="inline-flex items-center rounded-xl border border-white/20 px-5 py-3 font-semibold hover:bg-white/5">Contact</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-4 -z-10 rounded-3xl bg-white/5 blur-2xl"></div>
+                <img src="images/profile.jpg" alt="Profile"
+                    class="w-full max-w-md mx-auto rounded-3xl ring-1 ring-white/10 shadow-wire grayscale-img object-cover aspect-[4/5]" />
+            </div>
         </div>
     </section>
 
-    <section id="about" class="py-20 bg-gray-800">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 animate-fade-in">About Me</h2>
-            <div class="flex flex-col md:flex-row items-center gap-12 animate-fade-in">
-                <img src="images/profile.jpg" alt="Profile Picture" class="w-64 h-64 rounded-full object-cover shadow-lg">
-                <p class="text-lg text-gray-300 leading-relaxed">
-                    My name is Manjil Aayam Maharjan, and I am a cybersecurity researcher with a deep-rooted passion for understanding and securing the ever-evolving digital landscape. From an early stage, technology has fascinated me—not just in how it functions, but in how it can be protected from emerging threats. My journey into cybersecurity has been driven by a strong curiosity to explore new technologies, stay ahead of cyber threats, and contribute meaningfully to the field. I thrive on challenges that require analytical thinking, strategic problem-solving, and continuous learning. Whether it's diving deep into vulnerability assessments, penetration testing, or researching novel attack vectors, I am constantly seeking ways to sharpen my skills and expand my knowledge. I believe that cybersecurity is not just about defense but about building trust in technology and empowering innovation with safety. Through hands-on projects, collaborative learning, and real-world simulations, I’ve developed a strong technical foundation and a mindset focused on ethical responsibility. My goal is to grow not only as a cybersecurity expert but also as someone who contributes positively to the tech community by sharing insights, tools, and secure practices. I am excited to continue exploring, learning, and pushing boundaries in this fast-paced and impactful field.
+    <!-- ABOUT -->
+    <section id="about" class="py-16 border-t border-white/10">
+        <div class="mx-auto max-w-7xl px-6 grid lg:grid-cols-12 gap-10">
+            <div class="lg:col-span-5">
+                <h2 class="text-3xl font-extrabold">About</h2>
+                <p class="mt-4 text-white/70">
+                    I’m a cybersecurity researcher focused on VAPT and secure engineering. My approach combines
+                    methodology (OWASP, PTES) with creative exploitation and clear reporting that teams can actually
+                    use.
+                </p>
+                <div class="mt-6 grid grid-cols-2 gap-3">
+                    <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                        <p class="text-2xl font-extrabold">Web • API</p>
+                        <p class="text-xs text-white/60">AppSec focus</p>
+                    </div>
+                    <div class="rounded-xl border border-white/10 bg-white/5 p-4">
+                        <p class="text-2xl font-extrabold">CTFs</p>
+                        <p class="text-xs text-white/60">Labs & write-ups</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-7">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6 lg:p-8 leading-relaxed text-white/80">
+                    <p>
+                        I cover the full lifecycle: recon → threat modeling → exploitation → post-exploitation →
+                        reporting & fixes.
+                        Expect reproducible PoCs, risk-driven impact, and pragmatic remediation plans that reflect
+                        engineering realities.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS / TOOLING / METHODOLOGIES -->
+    <section id="skills" class="py-16 border-t border-white/10">
+        <div class="mx-auto max-w-7xl px-6">
+            <h2 class="text-3xl font-extrabold">Skills, Tooling & Methodologies</h2>
+
+            <div class="mt-8 grid lg:grid-cols-3 gap-8">
+                <!-- Skills -->
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                    <h3 class="font-semibold tracking-wide text-white/80">Core Domains</h3>
+                    <ul class="mt-4 space-y-2 text-white/70">
+                        <li>Web App & API Security (OWASP Top 10, business logic)</li>
+                        <li>Network Security & Linux Priv-Esc</li>
+                        <li>Threat Modeling & Risk Analysis</li>
+                        <li>Secure SDLC & Code Review (security)</li>
+                    </ul>
+                </div>
+
+                <!-- Tooling -->
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                    <h3 class="font-semibold tracking-wide text-white/80">Tooling</h3>
+                    <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                        <span class="px-2 py-1 rounded bg-black text-white border border-white/15">Burp Suite</span>
+                        <span class="px-2 py-1 rounded bg-black text-white border border-white/15">Nmap</span>
+                        <span class="px-2 py-1 rounded bg-black text-white border border-white/15">FFUF/dirb</span>
+                        <span class="px-2 py-1 rounded bg-black text-white border border-white/15">sqlmap</span>
+                        <span class="px-2 py-1 rounded bg-black text-white border border-white/15">Metasploit</span>
+                        <span class="px-2 py-1 rounded bg-black text-white border border-white/15">John/Hashcat</span>
+                        <span
+                            class="px-2 py-1 rounded bg-black text-white border border-white/15">LinPEAS/WinPEAS</span>
+                        <span class="px-2 py-1 rounded bg-black text-white border border-white/15">Gobuster</span>
+                        <span class="px-2 py-1 rounded bg-black text-white border border-white/15">Wireshark</span>
+                        <span class="px-2 py-1 rounded bg-black text-white border border-white/15">Python</span>
+                    </div>
+                </div>
+
+                <!-- Methodologies -->
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                    <h3 class="font-semibold tracking-wide text-white/80">Methodologies</h3>
+                    <ul class="mt-4 space-y-2 text-white/70">
+                        <li>OWASP Testing Guide</li>
+                        <li>OWASP ASVS (mapping in reports)</li>
+                        <li>PTES (Pre-engagement → Post-engagement)</li>
+                        <li>Reporting: CVSS v3.1, exploit chains, remediation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <!-- SERVICES -->
+    <section id="services" class="py-16 border-t border-white/10">
+        <div class="mx-auto max-w-7xl px-6">
+            <h2 class="text-3xl font-extrabold">Services</h2>
+            <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                    <h3 class="font-semibold">Secure Web App Development</h3>
+                    <p class="mt-2 text-white/70 text-sm">
+                        Designing and implementing secure web applications with a focus on secure coding practices,
+                        OWASP Top 10 compliance, and resilient architectures against modern threats.
+                    </p>
+                </div>
+
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                    <h3 class="font-semibold">Networking (Routing & Switching)</h3>
+                    <p class="mt-2 text-white/70 text-sm">
+                        Planning, configuring, and securing network infrastructures. Expertise in routing protocols,
+                        VLANs,
+                        ACLs, and switching technologies to ensure efficient and secure data flow.
+                    </p>
+                </div>
+
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                    <h3 class="font-semibold">Tools Valuable in IT Fields</h3>
+                    <p class="mt-2 text-white/70 text-sm">
+                        Proficient with a range of industry-standard tools including virtualization platforms,
+                        monitoring
+                        solutions, penetration testing frameworks, and collaboration tools essential for IT operations.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CASE STUDIES (PROJECTS) -->
+    <section id="projects" class="py-16 border-t border-white/10">
+        <div class="mx-auto max-w-7xl px-6">
+            <div class="flex items-end justify-between gap-6 mb-8">
+                <h2 class="text-3xl font-extrabold">Case Studies</h2>
+                <a href="#"
+                    class="hidden md:inline-flex items-center rounded-xl border border-white/20 px-4 py-2 text-sm hover:bg-white/5">All</a>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article
+                    class="group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:bg-white/[0.07] transition">
+                    <img src="images/project1.jpg" alt="RCE via Param" class="h-44 w-full object-cover grayscale-img">
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold group-hover:text-white">RCE Chain on Web App</h3>
+                        <p class="mt-2 text-white/70 text-sm">
+                            Recon → parameter tampering → command injection → creds leak → SSH → sudo misconfig → root.
+                        </p>
+                        <div class="mt-3 flex flex-wrap gap-2 text-xs text-white/60">
+                            <span class="px-2 py-0.5 rounded border border-white/15">OS Command Injection</span>
+                            <span class="px-2 py-0.5 rounded border border-white/15">Sensitive Info Exposure</span>
+                            <span class="px-2 py-0.5 rounded border border-white/15">Priv-Esc</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:bg-white/[0.07] transition">
+                    <img src="images/project2.jpg" alt="JWT Weakness" class="h-44 w-full object-cover grayscale-img">
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold group-hover:text-white">JWT Weak Signing Key</h3>
+                        <p class="mt-2 text-white/70 text-sm">JWT analysis → weak key → token forgery → horizontal
+                            privilege escalation.</p>
+                        <div class="mt-3 flex flex-wrap gap-2 text-xs text-white/60">
+                            <span class="px-2 py-0.5 rounded border border-white/15">Auth Bypass</span>
+                            <span class="px-2 py-0.5 rounded border border-white/15">JWT</span>
+                            <span class="px-2 py-0.5 rounded border border-white/15">IDOR</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article
+                    class="group rounded-2xl border border-white/10 bg-white/5 overflow-hidden hover:bg-white/[0.07] transition">
+                    <img src="images/project3.jpg" alt="CORS" class="h-44 w-full object-cover grayscale-img">
+                    <div class="p-5">
+                        <h3 class="text-xl font-semibold group-hover:text-white">CORS Trusted Null Origin</h3>
+                        <p class="mt-2 text-white/70 text-sm">Exploit delivery → API key exfiltration → impact demo →
+                            mitigation plan.</p>
+                        <div class="mt-3 flex flex-wrap gap-2 text-xs text-white/60">
+                            <span class="px-2 py-0.5 rounded border border-white/15">CORS</span>
+                            <span class="px-2 py-0.5 rounded border border-white/15">Exfiltration</span>
+                            <span class="px-2 py-0.5 rounded border border-white/15">Browser</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- LABS & CTFs -->
+    <section id="labs" class="py-16 border-t border-white/10">
+        <div class="mx-auto max-w-7xl px-6">
+            <h2 class="text-3xl font-extrabold">Labs & CTFs</h2>
+            <div class="mt-6 grid md:grid-cols-2 gap-6">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                    <h3 class="font-semibold">PortSwigger / TryHackMe / HTB</h3>
+                    <ul class="mt-3 list-disc list-inside text-white/70 text-sm space-y-1">
+                        <li>Automated CSRF/JWT/CORS labs with Python</li>
+                        <li>Post-exploitation automation & debug logs</li>
+                        <li>Write-ups with CVSS and fixes</li>
+                    </ul>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                    <h3 class="font-semibold">Highlights</h3>
+                    <ul class="mt-3 list-disc list-inside text-white/70 text-sm space-y-1">
+                        <li>Top findings: SQLi, SSRF, RCE, Path Traversal, IDOR</li>
+                        <li>Privilege escalation via sudo misconfig & SUID chain</li>
+                        <li>Exploit server delivery & API key exfiltration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WRITE-UPS -->
+    <section id="writeups" class="py-16 border-t border-white/10">
+        <div class="mx-auto max-w-7xl px-6">
+            <h2 class="text-3xl font-extrabold">Write-ups</h2>
+            <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/[0.07] transition"
+                    href="#" target="_blank" rel="noreferrer">
+                    <h3 class="font-semibold">Command Injection to Root</h3>
+                    <p class="mt-2 text-white/70 text-sm">Search param → base64 → .env creds → file download → SSH →
+                        sudo awk → root.</p>
+                </a>
+                <a class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/[0.07] transition"
+                    href="#" target="_blank" rel="noreferrer">
+                    <h3 class="font-semibold">JWT JWK Header Injection</h3>
+                    <p class="mt-2 text-white/70 text-sm">Supply malicious JWK → verification bypass → admin panel
+                        access.</p>
+                </a>
+                <a class="block rounded-2xl border border-white/10 bg-white/5 p-6 hover:bg-white/[0.07] transition"
+                    href="#" target="_blank" rel="noreferrer">
+                    <h3 class="font-semibold">CORS: Trusted Insecure Protocols</h3>
+                    <p class="mt-2 text-white/70 text-sm">Exploit delivery → log parsing → key extraction → submission.
+                    </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DISCLOSURE & CERTS -->
+    <section class="py-16 border-t border-white/10">
+        <div class="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-10">
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                <h3 class="text-2xl font-extrabold">Responsible Disclosure</h3>
+                <p class="mt-3 text-white/70 text-sm">
+                    I follow coordinated disclosure: verify, report privately, provide PoCs, allow remediation time,
+                    then publish with permission.
                 </p>
             </div>
-        </div>
-    </section>
-
-    <section id="projects" class="py-20 bg-gray-900">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 animate-fade-in">My Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden hover-scale animate-fade-in">
-                    <img src="images/project1.jpg" alt="Project 1" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">IP tracker</h3>
-                        <p class="text-gray-400">Ip tracker tool for tracking public ip through API</p>
-                    </div>
-                </div>
-                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden hover-scale animate-fade-in">
-                    <img src="images/project2.jpg" alt="Project 2" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">Secure Chat System</h3>
-                        <p class="text-gray-400">Python based secure chat system</p>
-                    </div>
-                </div>
-                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden hover-scale animate-fade-in">
-                    <img src="images/project3.jpg" alt="Project 3" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-semibold mb-2">Full Stack Web development</h3>
-                        <p class="text-gray-400">Cyber Book Store - full stack (coursework)</p>
-                    </div>
-                </div>
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+                <h3 class="text-2xl font-extrabold">Certifications & Learning</h3>
+                <ul class="mt-3 list-disc list-inside text-white/70 text-sm space-y-1">
+                    <li>(Add) eJPT / PNPT / OSCP (in progress or achieved)</li>
+                    <li>Hack The Box / TryHackMe streaks</li>
+                    <li>PortSwigger Academy labs (adv.)</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 bg-gray-800">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-center mb-12 animate-fade-in">Contact Me</h2>
-            <div class="max-w-lg mx-auto animate-fade-in">
-                <form id="contact-form" class="space-y-6">
-                    <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full px-4 py-3 bg-gray-700 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
-                    <input type="email" id="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 bg-gray-700 text-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
-                    <textarea id="message" name="message" placeholder="Your Message" required class="w-full px-4 py-3 bg-gray-700 text-gray-100 rounded-lg h-40 focus:outline-none focus:ring-2 focus:ring-teal-500"></textarea>
-                    <button type="submit" class="w-full bg-teal-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-600 transition-colors">Send Message</button>
+    <!-- CONTACT -->
+    <section id="contact" class="py-16 border-t border-white/10">
+        <div class="mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-12 items-start">
+            <div>
+                <h2 class="text-3xl font-extrabold">Get in Touch</h2>
+                <p class="mt-3 text-white/70 max-w-md">Have a security problem to solve or want to collaborate? Send a
+                    message.</p>
+                <div class="mt-8 grid gap-3 text-sm text-white/70">
+                    <p>Kathmandu, Nepal</p>
+                    <p><a class="underline underline-offset-4 hover:text-white"
+                            href="mailto:you@example.com">you@example.com</a></p>
+                    <p><a class="underline underline-offset-4 hover:text-white" href="https://github.com/"
+                            target="_blank" rel="noreferrer">github.com/yourhandle</a></p>
+                    <p><a class="underline underline-offset-4 hover:text-white" href="https://www.linkedin.com/"
+                            target="_blank" rel="noreferrer">linkedin.com/in/yourprofile</a></p>
+                </div>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-white/5 p-6 lg:p-8 shadow-wire">
+                <form id="contact-form" class="grid gap-4">
+                    <div>
+                        <label for="name" class="text-sm text-white/60">Your Name</label>
+                        <input id="name" name="name" required
+                            class="mt-1 w-full rounded-xl bg-black border border-white/15 px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/40"
+                            placeholder="Jane Doe" />
+                    </div>
+                    <div>
+                        <label for="email" class="text-sm text-white/60">Your Email</label>
+                        <input id="email" name="email" type="email" required
+                            class="mt-1 w-full rounded-xl bg-black border border-white/15 px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/40"
+                            placeholder="jane@domain.com" />
+                    </div>
+                    <div>
+                        <label for="message" class="text-sm text-white/60">Message</label>
+                        <textarea id="message" name="message" required rows="5"
+                            class="mt-1 w-full rounded-xl bg-black border border-white/15 px-4 py-3 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-white/40"
+                            placeholder="Tell me about your scope, targets, and timeline..."></textarea>
+                    </div>
+                    <button
+                        class="mt-2 inline-flex items-center justify-center rounded-xl bg-white text-black px-5 py-3 font-semibold hover:bg-white/90">
+                        Send Message
+                    </button>
+                    <p id="formStatus" class="text-sm text-white/60"></p>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 py-6 text-center">
-        <p class="text-gray-400">© 2025 Manjil Aayam Maharjan. All rights reserved.</p>
+    <!-- FOOTER -->
+    <footer class="border-t border-white/10">
+        <div
+            class="mx-auto max-w-7xl px-6 py-8 text-sm text-white/60 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p>© <span id="year"></span> Manjil Aayam Maharjan. All rights reserved.</p>
+            <a class="hover:text-white" href="#home">Back to top ↑</a>
+        </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
-        // Initialize EmailJS with your User ID
-        (function(){
-            emailjs.init("AZ5tryu78HvKJ5btd"); // Replace with your EmailJS User ID
-        })();
+        // EmailJS init — replace with your public key
+        (function () { emailjs.init("AZ5tryu78HvKJ5btd"); })();
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Form submission handling with EmailJS
-        const contactForm = document.getElementById('contact-form');
-        contactForm.addEventListener('submit', (e) => {
+        const statusEl = document.getElementById('formStatus');
+        document.getElementById('contact-form').addEventListener('submit', async (e) => {
             e.preventDefault();
-
-            // Send email using EmailJS
-            emailjs.sendForm('service_km9dw8c', 'template_rbrhyzs', contactForm)
-                .then(() => {
-                    alert('Message sent successfully!');
-                    contactForm.reset(); // Clear form
-                }, (error) => {
-                    console.error('EmailJS error:', error);
-                    alert('Failed to send message. Please try again later.');
-                });
+            statusEl.textContent = 'Sending...';
+            try {
+                await emailjs.sendForm('service_km9dw8c', 'template_rbrhyzs', e.target);
+                statusEl.textContent = 'Message sent. Thank you!';
+                e.target.reset();
+            } catch (err) {
+                console.error(err);
+                statusEl.textContent = 'Failed to send. Please try again.';
+            }
         });
+
+        // Mobile menu
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+        // Year
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
+
 </html>
